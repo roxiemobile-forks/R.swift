@@ -123,7 +123,7 @@ struct NibStructGenerator: StructGenerator {
   private func nibStruct(for nib: Nib, at externalAccessLevel: AccessLevel) -> Struct {
     let instantiateParameters = [
       Function.Parameter(name: "owner", localName: "ownerOrNil", type: Type._AnyObject.asOptional()),
-      Function.Parameter(name: "options", localName: "optionsOrNil", type: Type(module: .stdLib, name: SwiftIdentifier(rawValue: "[NSObject : AnyObject]"), optional: true), defaultValue: "nil")
+      Function.Parameter(name: "options", localName: "optionsOrNil", type: Type(module: .stdLib, name: SwiftIdentifier(rawValue: "[UINib.OptionsKey : Any]"), optional: true), defaultValue: "nil")
     ]
 
     let bundleLet = Let(
